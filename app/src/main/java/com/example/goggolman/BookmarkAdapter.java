@@ -8,8 +8,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.goggolman.Interfaces.ListItemListener;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class BookmarkAdapter extends BaseAdapter {
     private ListItemListener listener;
