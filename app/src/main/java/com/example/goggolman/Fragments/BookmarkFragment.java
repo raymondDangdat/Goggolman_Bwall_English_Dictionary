@@ -1,4 +1,4 @@
-package com.example.goggolman;
+package com.example.goggolman.Fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,8 +12,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.example.goggolman.Adapters.BookmarkAdapter;
+import com.example.goggolman.Helper.DBHelper;
 import com.example.goggolman.Interfaces.FragmentListener;
 import com.example.goggolman.Interfaces.ListItemListener;
+import com.example.goggolman.R;
 
 
 public class BookmarkFragment extends Fragment {

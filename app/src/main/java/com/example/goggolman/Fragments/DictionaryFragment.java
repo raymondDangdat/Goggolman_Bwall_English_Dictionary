@@ -1,4 +1,4 @@
-package com.example.goggolman;
+package com.example.goggolman.Fragments;
 
 
 import android.content.Context;
@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.goggolman.Interfaces.FragmentListener;
+import com.example.goggolman.R;
 
 import java.util.ArrayList;
 

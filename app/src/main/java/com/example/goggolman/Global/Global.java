@@ -1,4 +1,4 @@
-package com.example.goggolman;
+package com.example.goggolman.Global;
 
 import android.app.Activity;
 import android.content.Context;

@@ -23,6 +23,11 @@ import android.view.Menu;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.goggolman.Fragments.BookmarkFragment;
+import com.example.goggolman.Fragments.DetailFragment;
+import com.example.goggolman.Fragments.DictionaryFragment;
+import com.example.goggolman.Global.Global;
+import com.example.goggolman.Helper.DBHelper;
 import com.example.goggolman.Interfaces.FragmentListener;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.example.goggolman;
+package com.example.goggolman.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.goggolman.Interfaces.ListItemListener;
+import com.example.goggolman.R;
 
 import java.util.ArrayList;
 
