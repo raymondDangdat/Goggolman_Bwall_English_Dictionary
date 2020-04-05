@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.goggolman.R;
-import com.example.goggolman.Word;
+import com.example.goggolman.Model.Word;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -170,9 +170,9 @@ public class DBHelper extends SQLiteOpenHelper {
     public Word getWordFromBookmark(String key){
         String q = "SELECT * FROM bookmark WHERE upper([key]) = upper(?); ";
 
-        Cursor result =  mDB.rawQuery(q, null);
+        Cursor result =  mDB.rawQuery(q, new String[]{key});
 
-        Word word = new Word();
+        Word word = null;
         while (result.moveToNext()){
             word = new Word();
             word.key = result.getString(result.getColumnIndex(COL_KEY));
@@ -189,9 +189,11 @@ public class DBHelper extends SQLiteOpenHelper {
         String tableName = "";
         if (dicType == R.id.action_bwall_english){
             tableName = TBL_BWALL_ENGLISH;
-        }else if (dicType == R.id.action_eng_bwall){
+        }else if (dicType == R.id.action_doemak_english){
             tableName = TBL_BWALL_ENGLISH;
-        }else if (dicType == R.id.action_eng_bwalll){
+        }else if (dicType == R.id.action_kwaggallak_english){
+            tableName = TBL_BWALL_ENGLISH;
+        }else if (dicType == R.id.action_meer_eng){
             tableName = TBL_BWALL_ENGLISH;
         }
         return tableName;

@@ -9,13 +9,17 @@
             android:icon="@drawable/ic_bookmark"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_rate"
-            android:icon="@drawable/ic_thumb_up"
-            android:title="Rate" />
+            android:id="@+id/nav_folktales"
+            android:icon="@drawable/ic_child"
+            android:title="Pan Folktales" />
         <item
-            android:id="@+id/nav_share"
-            android:icon="@drawable/ic_menu_share"
-            android:title="Share" />
+            android:id="@+id/nav_proverbs"
+            android:icon="@drawable/ic_books"
+            android:title="Pan Proverbs" />
+        <item
+            android:id="@+id/nav_forum"
+            android:icon="@drawable/ic_group"
+            android:title="Forum" />
         <item
             android:id="@+id/nav_help"
             android:icon="@drawable/ic_help"

@@ -10,20 +10,25 @@
 
         <menu>
             <item
-                android:id="@+id/action_eng_bwall"
-                android:title="English - Bwall"
-                android:orderInCategory="100"
-                app:showAsAction="never"/>
-
-            <item
                 android:id="@+id/action_bwall_english"
                 android:title="Bwall - English"
                 android:orderInCategory="100"
                 app:showAsAction="never"/>
 
             <item
-                android:id="@+id/action_eng_bwalll"
-                android:title="English - Bwall"
+                android:id="@+id/action_doemak_english"
+                android:title="Doemak - English"
+                android:orderInCategory="100"
+                app:showAsAction="never"/>
+
+            <item
+                android:id="@+id/action_kwaggallak_english"
+                android:title="Kwaggallak - English"
+                android:orderInCategory="100"
+                app:showAsAction="never"/>
+            <item
+                android:id="@+id/action_meer_eng"
+                android:title="Meerniang - English"
                 android:orderInCategory="100"
                 app:showAsAction="never"/>
         </menu>

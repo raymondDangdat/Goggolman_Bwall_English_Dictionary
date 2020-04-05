@@ -153,13 +153,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         ArrayList<String> source = dbHelper.getWord(id);
 
-        if (id == R.id.action_eng_bwall){
+        if (id == R.id.action_bwall_english){
             dictionaryFragment.resetDataSource(source);
             menuSetting.setIcon(getDrawable(R.drawable.e));
-        }else if (id == R.id.action_bwall_english){
+        }else if (id == R.id.action_doemak_english){
             dictionaryFragment.resetDataSource(source);
             menuSetting.setIcon(getDrawable(R.drawable.b));
-        }else if (id == R.id.action_eng_bwalll){
+        }else if (id == R.id.action_kwaggallak_english){
+            dictionaryFragment.resetDataSource(source);
+            menuSetting.setIcon(getDrawable(R.drawable.b));
+        }else if (id == R.id.action_meer_eng){
             dictionaryFragment.resetDataSource(source);
             menuSetting.setIcon(getDrawable(R.drawable.b));
         }
@@ -184,10 +187,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         }else if (id == R.id.nav_home){
             Toast.makeText(this, "We are home!", Toast.LENGTH_SHORT).show();
-        }else if (id == R.id.nav_rate){
-            Toast.makeText(this, "Thumbs Up", Toast.LENGTH_SHORT).show();
+        }else if (id == R.id.nav_folktales){
+            Toast.makeText(this, "Coming soon", Toast.LENGTH_SHORT).show();
         }else if (id == R.id.nav_help){
             Toast.makeText(this, "How may we help you?", Toast.LENGTH_SHORT).show();
+        }else if (id == R.id.nav_forum){
+            Toast.makeText(this, "Coming soon!", Toast.LENGTH_SHORT).show();
+        }else if (id == R.id.nav_proverbs){
+            Toast.makeText(this, "Coming soon", Toast.LENGTH_SHORT).show();
         }
 
 
@@ -213,11 +220,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         String activeFragment = getSupportFragmentManager().findFragmentById(R.id.fragment_container).getClass().getSimpleName();
-        if (activeFragment.equals(BookmarkFragment.class.getSimpleName())){
+        if (activeFragment.equals(DetailFragment.class.getSimpleName())){
+            menuSetting.setVisible(false);
+            toolbar.findViewById(R.id.edit_search).setVisibility(View.GONE);
+            toolbar.setTitle("Word Detail");
+        }else if (activeFragment.equals(BookmarkFragment.class.getSimpleName())){
             menuSetting.setVisible(false);
             toolbar.findViewById(R.id.edit_search).setVisibility(View.GONE);
             toolbar.setTitle("Bookmark");
-        }else {
+        }
+        else {
             menuSetting.setVisible(true);
             toolbar.findViewById(R.id.edit_search).setVisibility(View.VISIBLE);
             toolbar.setTitle("");

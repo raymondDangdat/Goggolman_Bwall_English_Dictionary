@@ -1,4 +1,4 @@
-package com.example.goggolman;
+package com.example.goggolman.Model;
 
 public class Word {
 

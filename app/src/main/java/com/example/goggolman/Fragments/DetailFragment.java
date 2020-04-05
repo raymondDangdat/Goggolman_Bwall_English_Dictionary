@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.example.goggolman.Helper.DBHelper;
 import com.example.goggolman.R;
-import com.example.goggolman.Word;
+import com.example.goggolman.Model.Word;
 
 public class DetailFragment extends Fragment {
     private String value = "";
@@ -68,11 +68,13 @@ public class DetailFragment extends Fragment {
 
         Word bookmarkWord = mDBHelper.getWordFromBookmark(value);
         int isMark = bookmarkWord == null? 0:1;
-
         btnBookkmark.setTag(isMark);
 
-        int icon = bookmarkWord == null? R.drawable.ic_bookmark_border : R.drawable.ic_bookmark_black;
+
+       int icon = bookmarkWord == null? R.drawable.ic_bookmark_border : R.drawable.ic_bookmark_black;
         btnBookkmark.setImageResource(icon);
+
+
 
         btnBookkmark.setOnClickListener(new View.OnClickListener() {
             @Override
